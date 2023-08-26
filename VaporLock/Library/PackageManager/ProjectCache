@@ -5,7 +5,7 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638277449473910045
+      ticks: 638284907410000000
     m_Hash: 848660938
   m_LockFileStatus:
     m_FilePath: D:/Unity/Proyects/VaporLock/VaporLock/Packages/packages-lock.json
@@ -13,7 +13,7 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638277449473910045
+      ticks: 638284907410000000
     m_Hash: 552752024
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
@@ -3973,9 +3973,11 @@ m_ResolvedPackages:
     - 1.0.0-pre.3
     - 1.0.0-pre.4
     - 1.0.0
+    - 1.0.1
     compatible:
     - 1.0.0
-    recommended: 1.0.0
+    - 1.0.1
+    recommended: 1.0.1
     deprecated: []
   dependencies:
   - name: com.unity.2d.sprite
