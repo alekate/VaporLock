@@ -7,6 +7,7 @@ public class ganzua : MonoBehaviour
     [SerializeField] private float velocidad = 3f;
     private Rigidbody2D ganzuaRB;
     private float movimientoX;
+    private float movimientoY;
     private Vector2 mov;
 
     void Start()
@@ -18,7 +19,8 @@ public class ganzua : MonoBehaviour
     void Update()
     {
         movimientoX = Input.GetAxisRaw("Horizontal");
-        mov = new Vector2(movimientoX, 0); 
+        movimientoY = Input.GetAxisRaw("Vertical");
+        mov = new Vector2(movimientoX, movimientoY); 
     }
 
     private void FixedUpdate()
