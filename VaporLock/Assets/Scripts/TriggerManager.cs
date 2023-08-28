@@ -33,7 +33,6 @@ public class TriggerManager : MonoBehaviour
             }else
             {
                 p.GetComponent<piston>().Reiniciar();
-                Debug.Log("reiniciar");
             }
            
         }
@@ -41,6 +40,6 @@ public class TriggerManager : MonoBehaviour
 
     private void Victoria()
     {
-        Debug.Log("ganaste");
+        SceneManager.LoadScene("Victoria");
     }
 }

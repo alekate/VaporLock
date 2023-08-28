@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/LockPick.unity
+- path: Assets/Scenes/Derrota.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

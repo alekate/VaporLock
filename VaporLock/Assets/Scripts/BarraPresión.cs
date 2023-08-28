@@ -22,11 +22,6 @@ public class BarraPresión : MonoBehaviour
     private void Presion()
     {
         presionActual -= Time.deltaTime * velocidad;
-
-        if (presionActual < 60f || presionActual > 90f)
-        {
-   
-        }
     }
 
     private void AumentoPresion()

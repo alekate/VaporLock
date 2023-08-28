@@ -315,7 +315,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 4
+  m_Constraints: 5
 --- !u!61 &25226209
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -653,7 +653,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   barra: {fileID: 1103131415}
-  presionActual: 100
+  presionActual: 20
   presionMaxima: 100
   velocidad: 5
 --- !u!1 &632234767
@@ -825,7 +825,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 632234767}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd7435aa207398f4a884262b83ea8b7d, type: 3}
+  m_Script: {fileID: 11500000, guid: 9f73dbd27ba03d946bad247d2f32c841, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   velocidad: 3
@@ -1378,7 +1378,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 4
+  m_Constraints: 5
 --- !u!114 &948769902
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2667,7 +2667,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 4
+  m_Constraints: 5
 --- !u!61 &1889273473
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3036,7 +3036,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 4
+  m_Constraints: 5
 --- !u!61 &2130697576
 BoxCollider2D:
   m_ObjectHideFlags: 0

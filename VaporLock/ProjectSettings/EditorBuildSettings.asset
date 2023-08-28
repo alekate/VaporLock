@@ -8,4 +8,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/LockPick.unity
+    guid: da2ccc28b781e43498cd842658d0887f
+  - enabled: 1
+    path: Assets/Scenes/Victoria.unity
+    guid: e150b9e9467393449a76e274be06fc7f
+  - enabled: 1
+    path: Assets/Scenes/Derrota.unity
+    guid: 4bc284584ddbec84b863888a44f56b4d
   m_configObjects: {}

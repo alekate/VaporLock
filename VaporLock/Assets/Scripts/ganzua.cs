@@ -2,17 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ganzua : MonoBehaviour
+public class Movimiento : MonoBehaviour
 {
     [SerializeField] private float velocidad = 3f;
-    private Rigidbody2D ganzuaRB;
+    private Rigidbody2D personajeRB;
     private float movimientoX;
     private float movimientoY;
     private Vector2 mov;
 
     void Start()
     {
-       ganzuaRB = GetComponent<Rigidbody2D>();        
+       personajeRB = GetComponent<Rigidbody2D>();        
     }
 
 
@@ -25,6 +25,6 @@ public class ganzua : MonoBehaviour
 
     private void FixedUpdate()
     {
-        ganzuaRB.MovePosition(ganzuaRB.position + mov * velocidad * Time.deltaTime);
+        personajeRB.MovePosition(personajeRB.position + mov * velocidad * Time.deltaTime);
     }
 }
