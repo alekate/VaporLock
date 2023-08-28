@@ -4,11 +4,35 @@ using UnityEngine;
 
 public class piston : MonoBehaviour
 {
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.collider.name  == "punta")
-        {
-            transform.DOMove(new Vector2(0f, 1.6), 2f).SetLoops(-1,LoopType.Yoyo);
-        }
-    }
+   public bool activado = false;
+   public bool contado = false;
+
+   [SerializeField] private int velocidad;
+
+   [SerializeField] public Transform posiciónInicial;
+   private Vector3 moverHacia;
+   [SerializeField] public GameObject pistonObjeto;
+
+   private void Awake()
+   {
+    moverHacia = posiciónInicial.position;
+   } 
+
+   private void Update()
+   {
+     if (!activado)
+     {
+        pistonObjeto.transform.position = Vector3.MoveTowards(pistonObjeto.transform.position, moverHacia, velocidad * Time.deltaTime);
+     }
+     
+   }
+   private void OnTriggerEnter2D()
+   {
+     activado = true;
+   }
+
+   public void Reiniciar()
+   {
+     activado = false;
+   }
 }
