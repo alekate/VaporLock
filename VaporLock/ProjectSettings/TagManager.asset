@@ -7,6 +7,7 @@ TagManager:
   - piston
   - cerradura
   - jugador
+  - LockPick
   layers:
   - Default
   - TransparentFX

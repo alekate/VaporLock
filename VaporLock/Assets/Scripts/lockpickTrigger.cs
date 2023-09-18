@@ -1,12 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class lockpickTrigger : MonoBehaviour
 {
     public GameObject botonE;
+    public GameObject LockPick;
 
     private void Start()
     {
@@ -19,7 +19,7 @@ public class lockpickTrigger : MonoBehaviour
      
      if (Input.GetKeyDown(KeyCode.E))
      {
-        SceneManager.LoadScene("LockPick");
+        Instantiate(LockPick);
      }
   }
 

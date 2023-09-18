@@ -1,12 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class TriggerManager : MonoBehaviour
 {
     [SerializeField] public GameObject[] pistones;
     [SerializeField] public GameObject barraPresion;
+
+    public GameObject Victoria;
 
     private float presion;
 
@@ -27,19 +28,17 @@ public class TriggerManager : MonoBehaviour
                 Debug.Log(contadorPistones);
                 if (contadorPistones == 4)
                 {
-                    Victoria();
+                    Destroy(this);
+                    Instantiate(Victoria);
                 }
               }
             }else
             {
+                contadorPistones = 0;
                 p.GetComponent<piston>().Reiniciar();
             }
            
         }
     }
 
-    private void Victoria()
-    {
-        SceneManager.LoadScene("Victoria");
-    }
 }
