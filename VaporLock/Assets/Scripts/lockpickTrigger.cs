@@ -13,8 +13,10 @@ public class lockpickTrigger : MonoBehaviour
     public GameObject[] camara;
     public GameObject[] puertas;
     public GameObject jugador;
+    public GameObject victoria;
     private int numRandom;
     private int numPuerta;
+    private int cant;
 
   private void Start()
   {
@@ -27,6 +29,11 @@ public class lockpickTrigger : MonoBehaviour
     if (Input.GetKeyDown(KeyCode.E) && puertas[numPuerta].GetComponent<PuertaScript>().activo == true)
     {
       ActivarLockpick();
+    }
+
+    if (cant == 2)
+    {
+      Instantiate(victoria);
     }
   }
 
@@ -65,5 +72,6 @@ public class lockpickTrigger : MonoBehaviour
       camara[1].SetActive(false);
       camara[0].SetActive(true);
       puertas[numPuerta].GetComponent<PuertaScript>().DesactivarPuerta();
+      cant++;
   }
 }
