@@ -6,12 +6,28 @@ public class TriggerManager : MonoBehaviour
 {
     [SerializeField] public GameObject[] pistones;
     [SerializeField] public GameObject barraPresion;
+    public GameObject ganzuas;
+    private CambioGanzua ganzuasScript;
+    public GameObject botonQ;
 
     public GameObject Victoria;
 
     private float presion;
 
     private int contadorPistones;
+
+    public bool botonActivado = false;
+
+    private void Start()
+    {
+      ganzuasScript = ganzuas.GetComponent<CambioGanzua>();
+      
+    }
+
+    void OnEnable()
+    {
+      pistones = GameObject.FindGameObjectsWithTag("piston");
+    }
 
     private void Update()
     {
@@ -25,10 +41,8 @@ public class TriggerManager : MonoBehaviour
               {
                 contadorPistones ++;
                 p.GetComponent<piston>().contado = true;
-                Debug.Log(contadorPistones);
-                if (contadorPistones == 4)
+                if (contadorPistones == pistones.Length)
                 {
-                    Destroy(this);
                     Instantiate(Victoria);
                 }
               }
@@ -40,5 +54,24 @@ public class TriggerManager : MonoBehaviour
            
         }
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+         if (collision.CompareTag("punta"))
+         {
+            botonActivado = true;  
+            botonQ.SetActive(botonActivado);
+         }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+         if (collision.CompareTag("punta"))
+         {
+            botonActivado = false;
+            botonQ.SetActive(botonActivado);
+         }
+    }
+    
 
 }

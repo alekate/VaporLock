@@ -8,6 +8,9 @@ TagManager:
   - cerradura
   - jugador
   - LockPick
+  - ganzua
+  - punta
+  - "posici\xF3n"
   layers:
   - Default
   - TransparentFX

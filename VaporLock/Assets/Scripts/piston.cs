@@ -34,5 +34,6 @@ public class piston : MonoBehaviour
    public void Reiniciar()
    {
      activado = false;
+     contado = false;
    }
 }

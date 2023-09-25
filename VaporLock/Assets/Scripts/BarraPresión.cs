@@ -15,13 +15,22 @@ public class BarraPresión : MonoBehaviour
         barra.fillAmount = presionActual / presionMaxima;
         
         Presion();
-        AumentoPresion();
+        
+        if(presionActual <= 100){
+          AumentoPresion();
+        }
+        
 
     }
 
     private void Presion()
     {
         presionActual -= Time.deltaTime * velocidad;
+
+        if (presionActual <= 0)
+        {
+            presionActual = 0;
+        }
     }
 
     private void AumentoPresion()
@@ -29,6 +38,11 @@ public class BarraPresión : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             presionActual += 5f;
+        }
+
+        if (presionActual > 100)
+        {
+            presionActual = 100;
         }
     }
 }

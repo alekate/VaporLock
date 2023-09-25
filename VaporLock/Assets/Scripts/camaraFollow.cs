@@ -4,11 +4,10 @@ using UnityEngine;
 
 public class camaraFollow : MonoBehaviour
 {
-    [SerializeField] Transform target;
+    public Transform target;
 
     private void LateUpdate(){
         transform.position = target.position;
-
     }
 
 
