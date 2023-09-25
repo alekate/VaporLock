@@ -1,16 +1,25 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class TriggerManager : MonoBehaviour
 {
     [SerializeField] public GameObject[] pistones;
     [SerializeField] public GameObject barraPresion;
-
+    public GameObject gameManager;
+    public GameObject ganzuas;
+    private CambioGanzua ganzuasScript;
+    public GameObject botonQ;
     private float presion;
-
     private int contadorPistones;
+    public bool botonActivado = false;
+
+    void OnEnable()
+    {
+      pistones = GameObject.FindGameObjectsWithTag("piston");
+      ganzuasScript = ganzuas.GetComponent<CambioGanzua>();
+      gameManager = GameObject.Find("GameManager");
+    }
 
     private void Update()
     {
@@ -24,22 +33,34 @@ public class TriggerManager : MonoBehaviour
               {
                 contadorPistones ++;
                 p.GetComponent<piston>().contado = true;
-                Debug.Log(contadorPistones);
-                if (contadorPistones == 4)
+                if (contadorPistones == pistones.Length)
                 {
-                    Victoria();
+                  gameManager.GetComponent<lockpickTrigger>().DesactivarLockpick();
                 }
               }
             }else
             {
+                contadorPistones = 0;
                 p.GetComponent<piston>().Reiniciar();
             }
-           
         }
     }
 
-    private void Victoria()
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        SceneManager.LoadScene("Victoria");
+      if (collision.CompareTag("punta"))
+      {
+        botonActivado = true;  
+        botonQ.SetActive(botonActivado);
+      }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+      if (collision.CompareTag("punta"))
+      {
+        botonActivado = false;
+        botonQ.SetActive(botonActivado);
+      }
     }
 }

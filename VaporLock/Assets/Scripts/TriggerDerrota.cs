@@ -1,16 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class TriggerDerrota : MonoBehaviour
 {
+    public GameObject Victoria;
    private void OnTriggerEnter2D(Collider2D other)
    {
-    Debug.Log("te vi");
+
     if (other.GetComponent<Collider2D>().CompareTag("jugador"))
     {
-        SceneManager.LoadScene("Derrota");
+        Debug.Log("te vi");
+        Instantiate(Victoria);
+        Destroy(this);
     }
    }
 }

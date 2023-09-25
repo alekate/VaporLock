@@ -701,12 +701,12 @@ GameObject:
   - component: {fileID: 433252446}
   - component: {fileID: 433252445}
   m_Layer: 5
-  m_Name: fondo
+  m_Name: E
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &433252444
 RectTransform:
   m_ObjectHideFlags: 0
@@ -811,6 +811,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63632d953f53e204d83d17d26af4a0ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Victoria: {fileID: 4883798701731225280, guid: 42cf5c1ae9db2714f8bf2bbd68766450, type: 3}
 --- !u!60 &486053839
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -2585,6 +2586,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63632d953f53e204d83d17d26af4a0ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Victoria: {fileID: 4883798701731225280, guid: 42cf5c1ae9db2714f8bf2bbd68766450, type: 3}
 --- !u!1 &836514833
 GameObject:
   m_ObjectHideFlags: 0
@@ -3864,9 +3866,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1616457309}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 5.54, y: 7.1, z: 0}
-  m_LocalScale: {x: 0.825, y: 0.7875, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: 5.540001, y: 7.1000013, z: -0}
+  m_LocalScale: {x: 0.82500017, y: 0.7875002, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2045769484}
@@ -7705,6 +7707,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocidad: 3
+  ganzuaActiva: 0
 --- !u!114 &1974754075
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7718,6 +7721,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   botonE: {fileID: 433252443}
+  LockPick: {fileID: 5749294700876664826, guid: e6da28c59adc86a4cbc9d20dc841211c, type: 3}
 --- !u!1 &2001039068
 GameObject:
   m_ObjectHideFlags: 0
@@ -7925,6 +7929,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63632d953f53e204d83d17d26af4a0ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Victoria: {fileID: 4883798701731225280, guid: 42cf5c1ae9db2714f8bf2bbd68766450, type: 3}
 --- !u!60 &2045769486
 PolygonCollider2D:
   m_ObjectHideFlags: 0

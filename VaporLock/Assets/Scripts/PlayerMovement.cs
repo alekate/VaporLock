@@ -17,11 +17,21 @@ public class PlayerMovement : MonoBehaviour
     }
 
     private void Update() {
-        mx = Input.GetAxisRaw("Horizontal");
-        my = Input.GetAxisRaw("Vertical");
+        if (LockPickActive())
+        {
+           mx = Input.GetAxisRaw("Horizontal");
+           my = Input.GetAxisRaw("Vertical");
+        }
+        
     }
 
     private void FixedUpdate() {
         rb2D.velocity = new Vector2(mx, my).normalized * speed;
     }
+
+    private bool LockPickActive()
+    {
+        return !GameObject.FindWithTag("LockPick");
+    }
+
 }
