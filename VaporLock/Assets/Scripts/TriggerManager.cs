@@ -6,27 +6,19 @@ public class TriggerManager : MonoBehaviour
 {
     [SerializeField] public GameObject[] pistones;
     [SerializeField] public GameObject barraPresion;
+    public GameObject gameManager;
     public GameObject ganzuas;
     private CambioGanzua ganzuasScript;
     public GameObject botonQ;
-
-    public GameObject Victoria;
-
     private float presion;
-
     private int contadorPistones;
-
     public bool botonActivado = false;
-
-    private void Start()
-    {
-      ganzuasScript = ganzuas.GetComponent<CambioGanzua>();
-      
-    }
 
     void OnEnable()
     {
       pistones = GameObject.FindGameObjectsWithTag("piston");
+      ganzuasScript = ganzuas.GetComponent<CambioGanzua>();
+      gameManager = GameObject.Find("GameManager");
     }
 
     private void Update()
@@ -43,7 +35,7 @@ public class TriggerManager : MonoBehaviour
                 p.GetComponent<piston>().contado = true;
                 if (contadorPistones == pistones.Length)
                 {
-                    Instantiate(Victoria);
+                  gameManager.GetComponent<lockpickTrigger>().DesactivarLockpick();
                 }
               }
             }else
@@ -51,27 +43,24 @@ public class TriggerManager : MonoBehaviour
                 contadorPistones = 0;
                 p.GetComponent<piston>().Reiniciar();
             }
-           
         }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-         if (collision.CompareTag("punta"))
-         {
-            botonActivado = true;  
-            botonQ.SetActive(botonActivado);
-         }
+      if (collision.CompareTag("punta"))
+      {
+        botonActivado = true;  
+        botonQ.SetActive(botonActivado);
+      }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-         if (collision.CompareTag("punta"))
-         {
-            botonActivado = false;
-            botonQ.SetActive(botonActivado);
-         }
+      if (collision.CompareTag("punta"))
+      {
+        botonActivado = false;
+        botonQ.SetActive(botonActivado);
+      }
     }
-    
-
 }

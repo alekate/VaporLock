@@ -11,6 +11,8 @@ TagManager:
   - ganzua
   - punta
   - "posici\xF3n"
+  - puerta
+  - enemigo
   layers:
   - Default
   - TransparentFX

@@ -17,7 +17,7 @@ public class CambioGanzua : MonoBehaviour
         //ganzuas = GameObject.FindGameObjectsWithTag("ganzua");
         //posiciones = GameObject.FindGameObjectsWithTag("posición");
     }
-    void Start()
+    void OnEnable()
     {
         Triggers = GameObject.Find("Trigger Manager");
 
