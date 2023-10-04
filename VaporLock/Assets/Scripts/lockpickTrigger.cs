@@ -53,7 +53,7 @@ public class lockpickTrigger : MonoBehaviour
       botonQ.SetActive(true);
       botonE.SetActive(false);
       barra.SetActive(true);
-      jugador.GetComponent<Ganzua>().ganzuaActiva = false;
+      jugador.GetComponent<PlayerMovement>().persoanjeActivo= false;
       numRandom = Random.Range(0 , 4);
       LockPick[numRandom].SetActive(true);
       ganzuas.SetActive(true);
@@ -63,7 +63,7 @@ public class lockpickTrigger : MonoBehaviour
 
   public void DesactivarLockpick()
   {
-      jugador.GetComponent<Ganzua>().ganzuaActiva = true;
+      jugador.GetComponent<PlayerMovement>().persoanjeActivo = true;
       botonQ.SetActive(false);
       barra.SetActive(false);
       LockPick[numRandom].SetActive(false);

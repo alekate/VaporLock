@@ -8,11 +8,14 @@ public class enemigo : MonoBehaviour
   public Transform inicio;
   public int velocidad;
   public Transform objetoEnemigo;
+  public Transform cono;
   private Vector3 destino;
+  private Animator animatorController;
   
   private void Start()
   {
     destino = llegada.position;
+    animatorController = GetComponent<Animator>();
   }
 
   private void Update()
@@ -21,20 +24,17 @@ public class enemigo : MonoBehaviour
 
     if (objetoEnemigo.transform.position == llegada.position)
     {
-       StartCoroutine(Giro());
-        destino = inicio.position;
+      animatorController.SetBool("CambioAnim", true);
+      cono.GetComponent<TriggerDerrota>().Giro();
+      destino = inicio.position;
     }
 
     if (objetoEnemigo.transform.position == inicio.position)
     {
-        StartCoroutine(Giro());
-        destino = llegada.position;
+       animatorController.SetBool("CambioAnim", false);
+        cono.GetComponent<TriggerDerrota>().Giro();
+      destino = llegada.position;
     }
   }
 
-  IEnumerator Giro()
-  {
-     objetoEnemigo.eulerAngles = new Vector3(0, 0, objetoEnemigo.eulerAngles.z + 180f);
-     yield return null;
-  }
 }

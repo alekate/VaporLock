@@ -4,34 +4,43 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    Rigidbody2D rb2D;
+    [SerializeField] private float velocidad = 3f;
+    private Rigidbody2D personajeRB;
+    private float movimientoX;
+    private float movimientoY;
+    private Vector2 mov;
+    public bool persoanjeActivo;
 
-    [SerializeField] private float speed = 5f;
-    [Range(0f, 0.3f)][SerializeField] private float softMovement;
+    private Animator animatorController;
 
-    float mx;
-    float my;
-    
     void Start() {
-        rb2D = GetComponent<Rigidbody2D>();
+        personajeRB = GetComponent<Rigidbody2D>();
+        animatorController = GetComponent<Animator>();
     }
 
-    private void Update() {
-        if (LockPickActive())
+    private void Update()
+    {
+        if (Input.GetAxis("Horizontal") != 0)
         {
-           mx = Input.GetAxisRaw("Horizontal");
-           my = Input.GetAxisRaw("Vertical");
+            animatorController.SetFloat("horizontal", Input.GetAxis("Horizontal"));
+
+        }else if (Input.GetAxis("Vertical") != 0)
+        {
+            animatorController.SetFloat("vertical", Input.GetAxis("Vertical"));
+        }
+
+        if (persoanjeActivo)
+        {
+           movimientoX = Input.GetAxisRaw("Horizontal");
+           movimientoY = Input.GetAxisRaw("Vertical");
+           mov = new Vector2(movimientoX, movimientoY);
         }
         
     }
 
-    private void FixedUpdate() {
-        rb2D.velocity = new Vector2(mx, my).normalized * speed;
-    }
-
-    private bool LockPickActive()
+    private void FixedUpdate() 
     {
-        return !GameObject.FindWithTag("LockPick");
+        personajeRB.MovePosition(personajeRB.position + mov * velocidad * Time.deltaTime);
     }
 
 }
