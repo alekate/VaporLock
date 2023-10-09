@@ -13,6 +13,7 @@ TagManager:
   - "posici\xF3n"
   - puerta
   - enemigo
+  - palanca
   layers:
   - Default
   - TransparentFX

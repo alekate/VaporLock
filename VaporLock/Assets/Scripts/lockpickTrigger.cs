@@ -11,15 +11,18 @@ public class lockpickTrigger : MonoBehaviour
     public GameObject[] LockPick;
     public GameObject ganzuas;
     public GameObject[] camara;
+    public GameObject[] palancas;
     public GameObject[] puertas;
     public GameObject jugador;
     public GameObject victoria;
+    public GameObject puertaPrincipal;
     private int numRandom;
     private int numPuerta;
     private int cant;
 
   private void Start()
   {
+    palancas = GameObject.FindGameObjectsWithTag("palanca"); 
     puertas = GameObject.FindGameObjectsWithTag("puerta"); 
     jugador = GameObject.Find("Player");
   }
@@ -31,9 +34,9 @@ public class lockpickTrigger : MonoBehaviour
       ActivarLockpick();
     }
 
-    if (cant == 2)
+    if (cant == 3)
     {
-      Instantiate(victoria);
+      puertaPrincipal.SetActive(false);
     }
   }
 
@@ -46,6 +49,11 @@ public class lockpickTrigger : MonoBehaviour
         numPuerta = p;
       }
     }
+  }
+
+  public void ContarPlanca()
+  {
+    cant++;
   }
 
   private void ActivarLockpick()
@@ -72,6 +80,5 @@ public class lockpickTrigger : MonoBehaviour
       camara[1].SetActive(false);
       camara[0].SetActive(true);
       puertas[numPuerta].GetComponent<PuertaScript>().DesactivarPuerta();
-      cant++;
   }
 }

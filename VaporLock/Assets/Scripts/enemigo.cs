@@ -5,7 +5,9 @@ using UnityEngine;
 public class enemigo : MonoBehaviour
 {
   public Transform llegada;
-  public Transform inicio;
+  public GameObject[] posiciones;
+  public float[] animaciones;
+  public int numPosition = 0;
   public int velocidad;
   public Transform objetoEnemigo;
   public Transform cono;
@@ -14,7 +16,7 @@ public class enemigo : MonoBehaviour
   
   private void Start()
   {
-    destino = llegada.position;
+    destino = posiciones[numPosition].transform.position;
     animatorController = GetComponent<Animator>();
   }
 
@@ -22,19 +24,32 @@ public class enemigo : MonoBehaviour
   {
     objetoEnemigo.transform.position = Vector3.MoveTowards(objetoEnemigo.transform.position, destino, velocidad * Time.deltaTime);
 
-    if (objetoEnemigo.transform.position == llegada.position)
+    if (objetoEnemigo.transform.position == posiciones[numPosition].transform.position)
     {
-      animatorController.SetBool("CambioAnim", true);
-      cono.GetComponent<TriggerDerrota>().Giro();
-      destino = inicio.position;
+      cambioRumbo();
     }
 
-    if (objetoEnemigo.transform.position == inicio.position)
+  }
+
+  private void cambioRumbo()
+  {
+    cono.GetComponent<TriggerDerrota>().Giro();
+    Debug.Log(numPosition);
+    numPosition++;
+
+    if (numPosition < posiciones.Length)
     {
-       animatorController.SetBool("CambioAnim", false);
-        cono.GetComponent<TriggerDerrota>().Giro();
-      destino = llegada.position;
+      destino = posiciones[numPosition].transform.position;
+    }else
+    {
+      numPosition = 0;
+      destino = posiciones[numPosition].transform.position;
     }
   }
 
+  private void cambioAnim()
+  {
+    animatorController.SetFloat("HorizontalE", numPosition);
+    animatorController.SetFloat("VerticalE", numPosition + 1);
+  }
 }
