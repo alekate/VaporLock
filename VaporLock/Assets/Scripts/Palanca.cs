@@ -23,7 +23,6 @@ public class Palanca : MonoBehaviour
       {
         activo = true;  
         botonE.SetActive(activo);
-        gameManager.GetComponent<lockpickTrigger>().ContarPlanca();
       }
     }
 
