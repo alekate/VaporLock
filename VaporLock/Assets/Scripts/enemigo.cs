@@ -34,7 +34,6 @@ public class enemigo : MonoBehaviour
   private void cambioRumbo()
   {
     cono.GetComponent<TriggerDerrota>().Giro();
-    Debug.Log(numPosition);
     numPosition++;
 
     if (numPosition < posiciones.Length)
