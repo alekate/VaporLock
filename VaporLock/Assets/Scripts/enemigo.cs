@@ -28,7 +28,6 @@ public class enemigo : MonoBehaviour
     {
       cambioRumbo();
     }
-
   }
 
   private void cambioRumbo()

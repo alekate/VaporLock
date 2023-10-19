@@ -470,7 +470,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 6319874412697444670}
         m_TargetAssemblyTypeName: Restart, Assembly-CSharp
-        m_MethodName: Reiniciar
+        m_MethodName: MenuInicio
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

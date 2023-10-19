@@ -7,6 +7,15 @@ public class Restart : MonoBehaviour
 {
   public void Reiniciar()
   {
-    SceneManager.LoadScene("SampleScene");
+    SceneManager.LoadScene("SampleScene 1");
+  }
+
+  public void MenuInicio()
+  {
+    SceneManager.LoadScene("Menu");
+  }
+  public void Creditos()
+  {
+    SceneManager.LoadScene("Creditos");
   }
 }
