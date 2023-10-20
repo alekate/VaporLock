@@ -64,7 +64,7 @@ public class lockpickTrigger : MonoBehaviour
       barra.GetComponent<BarraPresión>().presionActual = 10;
       jugador.GetComponent<PlayerMovement>().persoanjeActivo= false;
       numRandom = Random.Range(0 , LockPick.Length);
-      LockPick[0].SetActive(true);
+      LockPick[numRandom].SetActive(true);
       ganzuas.SetActive(true);
       camaras[0].SetActive(false);
       camaras[1].SetActive(true);
@@ -75,7 +75,7 @@ public class lockpickTrigger : MonoBehaviour
       jugador.GetComponent<PlayerMovement>().persoanjeActivo = true;
       botonQ.SetActive(false);
       barra.SetActive(false);
-      LockPick[0].SetActive(false);
+      LockPick[numRandom].SetActive(false);
       ganzuas.SetActive(false);
       barra.SetActive(false);
       camaras[1].SetActive(false);

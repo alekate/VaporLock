@@ -5,6 +5,8 @@ using UnityEngine;
 public class TriggerDerrota : MonoBehaviour
 {
     public GameObject Derrota;
+    public float[] rotaciones;
+    private int numRotacion = 0;
     public Transform cono;
    private void OnTriggerEnter2D(Collider2D other)
    {
@@ -19,6 +21,14 @@ public class TriggerDerrota : MonoBehaviour
 
    public void Giro()
    {
-    cono.eulerAngles = new Vector3(0, 0, cono.eulerAngles.z + 180f);
+    if (numRotacion == rotaciones.Length)
+    {
+      Debug.Log("reinicia");
+      numRotacion = 0; 
+    }
+
+    cono.eulerAngles = new Vector3(0, 0, cono.eulerAngles.z + rotaciones[numRotacion]);
+    numRotacion++;
+    
    }
 }
