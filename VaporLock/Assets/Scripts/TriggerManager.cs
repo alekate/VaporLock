@@ -35,6 +35,7 @@ public class TriggerManager : MonoBehaviour
                 p.GetComponent<piston>().contado = true;
                 if (contadorPistones == pistones.Length)
                 {
+                  ganzuasScript.ReinicioGanzua();
                   gameManager.GetComponent<lockpickTrigger>().DesactivarLockpick();
                 }
               }

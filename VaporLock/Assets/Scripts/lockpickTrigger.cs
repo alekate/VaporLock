@@ -10,7 +10,7 @@ public class lockpickTrigger : MonoBehaviour
     public GameObject barra;
     public GameObject[] LockPick;
     public GameObject ganzuas;
-    public GameObject[] camara;
+    public GameObject[] camaras;
     public GameObject[] palancas;
     public GameObject[] puertas;
     public GameObject jugador;
@@ -47,6 +47,7 @@ public class lockpickTrigger : MonoBehaviour
       if (puertas[p].GetComponent<PuertaScript>().activo == true)
       {
         numPuerta = p;
+        Debug.Log(numPuerta);
       }
     }
   }
@@ -61,12 +62,13 @@ public class lockpickTrigger : MonoBehaviour
       botonQ.SetActive(true);
       botonE.SetActive(false);
       barra.SetActive(true);
+      barra.GetComponent<BarraPresión>().presionActual = 10;
       jugador.GetComponent<PlayerMovement>().persoanjeActivo= false;
-      numRandom = Random.Range(0 , 4);
+      numRandom = Random.Range(0 , LockPick.Length);
       LockPick[numRandom].SetActive(true);
       ganzuas.SetActive(true);
-      camara[0].SetActive(false);
-      camara[1].SetActive(true);
+      camaras[0].SetActive(false);
+      camaras[1].SetActive(true);
   }
 
   public void DesactivarLockpick()
@@ -77,8 +79,8 @@ public class lockpickTrigger : MonoBehaviour
       LockPick[numRandom].SetActive(false);
       ganzuas.SetActive(false);
       barra.SetActive(false);
-      camara[1].SetActive(false);
-      camara[0].SetActive(true);
+      camaras[1].SetActive(false);
+      camaras[0].SetActive(true);
       puertas[numPuerta].GetComponent<PuertaScript>().DesactivarPuerta();
   }
 }

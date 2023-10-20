@@ -7,6 +7,7 @@ public class enemigo : MonoBehaviour
   public Transform llegada;
   public GameObject[] posiciones;
   public float[] animaciones;
+  private int frame = 0;
   public int numPosition = 0;
   public int velocidad;
   public Transform objetoEnemigo;
@@ -28,12 +29,12 @@ public class enemigo : MonoBehaviour
     {
       cambioRumbo();
     }
-
   }
 
   private void cambioRumbo()
   {
     cono.GetComponent<TriggerDerrota>().Giro();
+    cambioAnim();
     numPosition++;
 
     if (numPosition < posiciones.Length)
@@ -48,7 +49,17 @@ public class enemigo : MonoBehaviour
 
   private void cambioAnim()
   {
-    animatorController.SetFloat("HorizontalE", numPosition);
-    animatorController.SetFloat("VerticalE", numPosition + 1);
+    if (frame == animaciones.Length)
+    {
+      frame = 0;
+    }
+
+    float X = animaciones[frame];
+    float Y = animaciones[frame + 1];
+    
+    animatorController.SetFloat("HorizontalE", X);
+    animatorController.SetFloat("VerticalE", Y);
+    
+    frame += 2;
   }
 }
