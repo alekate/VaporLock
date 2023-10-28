@@ -14,6 +14,8 @@ TagManager:
   - puerta
   - enemigo
   - palanca
+  - palanca2
+  - palanca3
   layers:
   - Default
   - TransparentFX

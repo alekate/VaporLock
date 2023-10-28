@@ -4,26 +4,34 @@ using UnityEngine;
 
 public class Palanca : MonoBehaviour
 {
-  public bool activo;
+  public bool enRango;
+  private bool activado = true;
   public GameObject yo;
   public GameObject botonE;
   public GameObject gameManager;
+  private Animator animator;
+  private string tag;
+
+private void Start()
+{
+    animator = GetComponent<Animator>();
+    tag = yo.transform.tag;
+}
 
   private void Update()
   {
-      if (Input.GetKeyDown(KeyCode.E) && activo)
+      if (Input.GetKeyDown(KeyCode.E) && enRango)
       {
-        gameManager.GetComponent<lockpickTrigger>().ContarPlanca(); 
+        gameManager.GetComponent<lockpickTrigger>().ContarPlanca(tag); 
         DesactivarPalanca();
       }
   }
   private void OnTriggerEnter2D(Collider2D collision)
   {
-    if (collision.CompareTag("jugador"))
+    if (collision.CompareTag("jugador") && activado)
     {
-      Debug.Log("activo");
-      activo = true;  
-      botonE.SetActive(activo);
+      enRango = true;  
+      botonE.SetActive(enRango);
     }
   }
 
@@ -31,13 +39,14 @@ public class Palanca : MonoBehaviour
   {
     if (collision.CompareTag("jugador"))
     {
-      activo = false;
-      botonE.SetActive(activo);
+      enRango = false;
+      botonE.SetActive(enRango);
     }
   }
 
   public void DesactivarPalanca()
   {
-    yo.SetActive(false);
+    animator.SetBool("activado", false); 
+    activado = false;  
   }
 }
