@@ -12,10 +12,14 @@ public class piston : MonoBehaviour
    [SerializeField] public Transform posiciónInicial;
    private Vector3 moverHacia;
    [SerializeField] public GameObject pistonObjeto;
+   private AudioSource audioSource;
+   public AudioClip sonidoActivado;
+   public AudioClip sonidoDesactivado;
 
    private void Awake()
    {
     moverHacia = posiciónInicial.position;
+    audioSource = GetComponent<AudioSource>();
    } 
 
    private void Update()
@@ -29,6 +33,7 @@ public class piston : MonoBehaviour
    private void OnTriggerEnter2D()
    {
      activado = true;
+     audioSource.PlayOneShot(sonidoActivado);
    }
 
    public void Reiniciar()

@@ -10,16 +10,19 @@ public class TriggerManager : MonoBehaviour
     public GameObject gameManager;
     public GameObject ganzuas;
     private CambioGanzua ganzuasScript;
-    public GameObject botonQ;
     private float presion;
     private int contadorPistones;
     public bool botonActivado = false;
+    private AudioSource audioSource;
+    public AudioClip sonidoDesactivado;
+    
 
     void OnEnable()
     {
       pistones = GameObject.FindGameObjectsWithTag("piston");
       ganzuasScript = ganzuas.GetComponent<CambioGanzua>();
       gameManager = GameObject.Find("GameManager");
+      audioSource = GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -28,7 +31,7 @@ public class TriggerManager : MonoBehaviour
 
         foreach (GameObject p in pistones)
         {
-            if (presion > 55 && presion < 75)
+            if (presion > 50 && presion < 75)
             {
               if (p.GetComponent<piston>().activado == true && p.GetComponent<piston>().contado == false)
               {
@@ -38,6 +41,7 @@ public class TriggerManager : MonoBehaviour
                 {
                   ganzuasScript.ReinicioGanzua();
                   gameManager.GetComponent<lockpickTrigger>().DesactivarLockpick();
+                  audioSource.PlayOneShot(sonidoDesactivado);
                 }
               }
             }else
@@ -53,7 +57,6 @@ public class TriggerManager : MonoBehaviour
       if (collision.CompareTag("punta"))
       {
         botonActivado = true;  
-        botonQ.SetActive(botonActivado);
       }
     }
 
@@ -62,7 +65,6 @@ public class TriggerManager : MonoBehaviour
       if (collision.CompareTag("punta"))
       {
         botonActivado = false;
-        botonQ.SetActive(botonActivado);
       }
     }
 }

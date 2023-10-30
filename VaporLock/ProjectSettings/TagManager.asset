@@ -16,6 +16,7 @@ TagManager:
   - palanca
   - palanca2
   - palanca3
+  - Trigger
   layers:
   - Default
   - TransparentFX

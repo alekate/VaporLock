@@ -6,7 +6,6 @@ using UnityEngine.UI;
 public class lockpickTrigger : MonoBehaviour
 {
     public GameObject botonE;
-    public GameObject botonQ;
     public GameObject barra;
     public GameObject[] LockPick;
     public GameObject ganzuas;
@@ -26,6 +25,13 @@ public class lockpickTrigger : MonoBehaviour
     private int cantC;
     private int cantV;
     private bool jugadorActivo = true;
+    public GameObject musicaGeneral;
+    public GameObject musicaMinijuego;
+    private AudioSource audioSource;
+    public AudioClip puertaDesactivada;
+    public AudioClip puertaPalanca;
+    public AudioClip puertaPalancaPrincipal;
+    public GameObject enemigos;
 
   private void Start()
   {
@@ -34,6 +40,7 @@ public class lockpickTrigger : MonoBehaviour
     palancas3 = GameObject.FindGameObjectsWithTag("palanca3"); 
     puertas = GameObject.FindGameObjectsWithTag("puerta"); 
     jugador = GameObject.Find("Player");
+    audioSource = GetComponent<AudioSource>();
   }
 
   private void Update()
@@ -43,19 +50,22 @@ public class lockpickTrigger : MonoBehaviour
       ActivarLockpick();
     }
 
-    if (cantP == 3)
+    if (cantP == palancas.Length)
     {
       puertaPrincipal.SetActive(false);
+      audioSource.PlayOneShot(puertaPalancaPrincipal);
     }
 
-      if (cantV == 3)
+      if (cantV == palancas3.Length)
     {
       puertaVerde.SetActive(false);
+      audioSource.PlayOneShot(puertaDesactivada);
     }
 
-      if (cantC == 3)
+      if (cantC == palancas2.Length)
     {
       puertaRoja.SetActive(false);
+      audioSource.PlayOneShot(puertaDesactivada);
     }
   }
 
@@ -66,7 +76,6 @@ public class lockpickTrigger : MonoBehaviour
       if (puertas[p].GetComponent<PuertaScript>().activo == true)
       {
         numPuerta = p;
-        Debug.Log(numPuerta);
       }
     }
   }
@@ -92,7 +101,6 @@ public class lockpickTrigger : MonoBehaviour
 
   private void ActivarLockpick()
   {
-      botonQ.SetActive(true);
       botonE.SetActive(false);
       barra.SetActive(true);
       barra.GetComponent<BarraPresión>().presionActual = 50;
@@ -103,19 +111,30 @@ public class lockpickTrigger : MonoBehaviour
       ganzuas.SetActive(true);
       camaras[0].SetActive(false);
       camaras[1].SetActive(true);
+      musicaGeneral.SetActive(false);
+      musicaMinijuego.SetActive(true);
+      enemigos.SetActive(false);
   }
 
   public void DesactivarLockpick()
   {
       jugador.GetComponent<PlayerMovement>().persoanjeActivo = true;
       jugadorActivo = true;
-      botonQ.SetActive(false);
       barra.SetActive(false);
       LockPick[numRandom].SetActive(false);
       ganzuas.SetActive(false);
       barra.SetActive(false);
       camaras[1].SetActive(false);
       camaras[0].SetActive(true);
-      puertas[numPuerta].GetComponent<PuertaScript>().DesactivarPuerta();
+      musicaGeneral.SetActive(true);
+      musicaMinijuego.SetActive(false);
+      audioSource.PlayOneShot(puertaDesactivada);
+      enemigos.SetActive(true);
+      Invoke("DesacPuerta", 1f);
+  }
+
+  private void DesacPuerta()
+  {
+    puertas[numPuerta].GetComponent<PuertaScript>().DesactivarPuerta();
   }
 }
