@@ -6,6 +6,7 @@ public class TriggerManager : MonoBehaviour
 {
     [SerializeField] public GameObject[] pistones;
     [SerializeField] public GameObject barraPresion;
+    
     public GameObject gameManager;
     public GameObject ganzuas;
     private CambioGanzua ganzuasScript;
@@ -27,7 +28,7 @@ public class TriggerManager : MonoBehaviour
 
         foreach (GameObject p in pistones)
         {
-            if (presion > 60 && presion < 90)
+            if (presion > 55 && presion < 75)
             {
               if (p.GetComponent<piston>().activado == true && p.GetComponent<piston>().contado == false)
               {

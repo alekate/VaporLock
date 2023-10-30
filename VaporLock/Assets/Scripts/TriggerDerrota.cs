@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class TriggerDerrota : MonoBehaviour
 {
+ 
+ [SerializeField] private AudioSource Alerta;
+  
     public GameObject Derrota;
     public float[] rotaciones;
     private int numRotacion = 0;
@@ -15,6 +18,7 @@ public class TriggerDerrota : MonoBehaviour
     {
         Debug.Log("te vi");
         Instantiate(Derrota);
+        Alerta.Play();
         Destroy(this);
     }
    }

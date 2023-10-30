@@ -13,6 +13,8 @@ public class PlayerMovement : MonoBehaviour
 
     private Animator animatorController;
 
+    [SerializeField] private AudioSource caminar;
+
     void Start() {
         personajeRB = GetComponent<Rigidbody2D>();
         animatorController = GetComponent<Animator>();
@@ -23,10 +25,14 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetAxis("Horizontal") != 0)
         {
             animatorController.SetFloat("horizontal", Input.GetAxis("Horizontal"));
+            caminar.Play();
+
 
         }else if (Input.GetAxis("Vertical") != 0)
         {
             animatorController.SetFloat("vertical", Input.GetAxis("Vertical"));
+            caminar.Play();
+
         }
 
         if (persoanjeActivo)
@@ -34,6 +40,7 @@ public class PlayerMovement : MonoBehaviour
            movimientoX = Input.GetAxisRaw("Horizontal");
            movimientoY = Input.GetAxisRaw("Vertical");
            mov = new Vector2(movimientoX, movimientoY);
+
         }
         
     }

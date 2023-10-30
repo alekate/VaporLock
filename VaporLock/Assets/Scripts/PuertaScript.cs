@@ -9,12 +9,15 @@ public class PuertaScript : MonoBehaviour
     public GameObject botonE;
     public GameObject gameManager;
 
+    [SerializeField] private AudioSource PuertaLock;
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
       if (collision.CompareTag("jugador"))
       {
         activo = true;  
         botonE.SetActive(activo);
+        PuertaLock.Play();
         gameManager.GetComponent<lockpickTrigger>().BuscarPuerta();
       }
     }

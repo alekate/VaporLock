@@ -12,6 +12,8 @@ public class Palanca : MonoBehaviour
   private Animator animator;
   private string tag;
 
+  [SerializeField] private AudioSource PalancaSFX;
+
 private void Start()
 {
     animator = GetComponent<Animator>();
@@ -24,6 +26,7 @@ private void Start()
       {
         gameManager.GetComponent<lockpickTrigger>().ContarPlanca(tag); 
         DesactivarPalanca();
+        PalancaSFX.Play();
       }
   }
   private void OnTriggerEnter2D(Collider2D collision)
