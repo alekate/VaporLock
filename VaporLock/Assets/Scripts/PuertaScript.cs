@@ -10,6 +10,7 @@ public class PuertaScript : MonoBehaviour
     public GameObject gameManager;
 
     [SerializeField] private AudioSource PuertaLock;
+    public AudioClip chau;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -34,5 +35,6 @@ public class PuertaScript : MonoBehaviour
     public void DesactivarPuerta()
     {
       yo.SetActive(false);
+      PuertaLock.PlayOneShot(chau);
     }
 }

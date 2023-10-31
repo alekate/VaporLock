@@ -119,7 +119,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 106
+  controlID: 105
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -189,8 +189,8 @@ MonoBehaviour:
     y: 0
     width: 337.6
     height: 506.4
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 201, y: 221}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
@@ -215,8 +215,8 @@ MonoBehaviour:
     y: 0
     width: 828.80005
     height: 506.4
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
@@ -270,8 +270,8 @@ MonoBehaviour:
     y: 0
     width: 369.59998
     height: 770.8
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 276, y: 71}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 18}
   m_Panes:
   - {fileID: 18}
@@ -413,9 +413,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: eabb0200
-      m_LastClickedID: 179178
-      m_ExpandedIDs: 8049feffc449fefff64bfefffe4bfeff144cfeffde52feff5e56feffa256feffee58fefff658feff0c59feff225afeffd466feff2a67feff7269feff7669feff8869fefff459ffff025effff1a71ffffaef6ffffc2f6ffffccf6ffff22f7ffff38f7ffffbc630000e2630000066400002c6400006064000068640000cc6400005a650000b66500002266000036660000186700002267000080670000b4670000c0680000fa68000008690000266900006069000090690000766a0000487b0200267d02008a810200f49b0200ca9d0200aea102001abb020096bc0200febc0200
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: 62d9ffff16fbffff2c6300008e6300000e64000030640000366400001e670000166800001a68000056680000a4680000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -789,7 +789,7 @@ MonoBehaviour:
       floating: 1
       collapsed: 0
       displayed: 1
-      snapOffset: {x: 417, y: 221}
+      snapOffset: {x: 582.4, y: 345.59998}
       snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 0
       id: UnityEditor.SceneViewCameraOverlay
@@ -808,9 +808,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 95.29703, y: -1.0921693, z: -2.321391}
+    m_Target: {x: -9.973879, y: -4.0703335, z: -0.4052238}
     speed: 2
-    m_Value: {x: 95.3906, y: -1.101556, z: -2.3197074}
+    m_Value: {x: -9.973879, y: -4.0703335, z: -0.4052238}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -860,9 +860,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 3.9099927
+    m_Target: 7.8964224
     speed: 2
-    m_Value: 3.7416198
+    m_Value: 7.8964224
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -1089,7 +1089,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes
+    - Assets/Sprites/animaciones/transparencia
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -1097,16 +1097,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 88
   m_LastFolders:
-  - Assets/Scenes
+  - Assets/Sprites/animaciones/transparencia
   m_LastFoldersGridSize: 88
   m_LastProjectPath: "D:\\UnRaf\\3\xB0 a\xF1o\\Taller 3\\VaporLock\\VaporLock\\VaporLock"
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 72.600006}
-    m_SelectedIDs: 226e0000
-    m_LastClickedID: 28194
-    m_ExpandedIDs: 00000000946d0000966d0000986d00009a6d00009c6d00009e6d0000a06d00001c6e0000
+    scrollPos: {x: 0, y: 51}
+    m_SelectedIDs: 766d0000
+    m_LastClickedID: 28022
+    m_ExpandedIDs: 00000000da6c0000dc6c0000de6c0000e06c0000e26c0000e46c0000e66c0000e86c0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1134,7 +1134,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000946d0000966d0000986d00009a6d00009c6d00009e6d0000a06d0000
+    m_ExpandedIDs: 00000000da6c0000dc6c0000de6c0000e06c0000e26c0000e46c0000e66c0000e86c0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1257,10 +1257,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1389
-    y: 73
-    width: 530
-    height: 966
+    x: 1166.4
+    y: 73.6
+    width: 368.59998
+    height: 749.8
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0

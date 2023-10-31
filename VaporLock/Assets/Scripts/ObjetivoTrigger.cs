@@ -5,6 +5,8 @@ using UnityEngine;
 public class ObjetivoTrigger : MonoBehaviour
 {
     public GameObject Objetivo;
+    public GameObject yo;
+    public AudioSource audioSource;
 
     private void OnTriggerEnter2D(Collider2D other)
    {
@@ -20,5 +22,16 @@ public class ObjetivoTrigger : MonoBehaviour
     {
       Objetivo.SetActive(false);
     }
+   }
+
+   public void DesacPuertaPalanca()
+   {
+     audioSource.Play();
+     Invoke("ChauPuerta", 3f);
+   }
+
+   private void ChauPuerta()
+   {
+     yo.SetActive(false);
    }
 }

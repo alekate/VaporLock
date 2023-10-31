@@ -29,8 +29,6 @@ public class lockpickTrigger : MonoBehaviour
     public GameObject musicaMinijuego;
     private AudioSource audioSource;
     public AudioClip puertaDesactivada;
-    public AudioClip puertaPalanca;
-    public AudioClip puertaPalancaPrincipal;
     public GameObject enemigos;
 
   private void Start()
@@ -52,20 +50,20 @@ public class lockpickTrigger : MonoBehaviour
 
     if (cantP == palancas.Length)
     {
-      puertaPrincipal.SetActive(false);
-      audioSource.PlayOneShot(puertaPalancaPrincipal);
+      puertaPrincipal.GetComponent<ObjetivoTrigger>().DesacPuertaPalanca();
+      cantP++;
     }
 
       if (cantV == palancas3.Length)
     {
-      puertaVerde.SetActive(false);
-      audioSource.PlayOneShot(puertaDesactivada);
+      puertaVerde.GetComponent<ObjetivoTrigger>().DesacPuertaPalanca();
+      cantV++;
     }
 
       if (cantC == palancas2.Length)
-    {
-      puertaRoja.SetActive(false);
-      audioSource.PlayOneShot(puertaDesactivada);
+    { 
+      puertaRoja.GetComponent<ObjetivoTrigger>().DesacPuertaPalanca();
+      cantC++;
     }
   }
 
