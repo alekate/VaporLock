@@ -18,4 +18,14 @@ public class Restart : MonoBehaviour
   {
     SceneManager.LoadScene("Creditos");
   }
+
+  public void CinematicaInicial()
+  {
+    SceneManager.LoadScene("Cinematica Inicial");
+  }
+
+  public void CinematicaFinal()
+  {
+    SceneManager.LoadScene("Cinematica Final");
+  }
 }

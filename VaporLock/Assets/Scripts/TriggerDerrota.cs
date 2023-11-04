@@ -16,9 +16,9 @@ public class TriggerDerrota : MonoBehaviour
 
     if (other.GetComponent<Collider2D>().CompareTag("jugador"))
     {
-        Instantiate(Derrota);
-        Alerta.Play();
-        Destroy(this);
+      Instantiate(Derrota);
+      Alerta.Play();
+      Destroy(this);
     }
    }
 
