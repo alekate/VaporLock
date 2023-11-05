@@ -28,7 +28,7 @@ public class TriggerManager : MonoBehaviour
 
         foreach (GameObject p in pistones)
         {
-            if (presion > 55 && presion < 80)
+            if (presion > 45 && presion < 73)
             {
               if (p.GetComponent<piston>().activado == true && p.GetComponent<piston>().contado == false)
               {
