@@ -54,7 +54,7 @@ public class lockpickTrigger : MonoBehaviour
       cantP++;
     }
 
-      if (cantV == palancas3.Length)
+      if (cantV == 1)
     {
       puertaVerde.GetComponent<ObjetivoTrigger>().DesacPuertaPalanca();
       cantV++;
