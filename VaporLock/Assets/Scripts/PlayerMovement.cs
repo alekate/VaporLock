@@ -25,7 +25,8 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetAxis("Horizontal") != 0)
         {
             animatorController.SetFloat("horizontal", Input.GetAxis("Horizontal"));
-        }else if (Input.GetAxis("Vertical") != 0)
+        } 
+        if (Input.GetAxis("Vertical") != 0)
         {
             animatorController.SetFloat("vertical", Input.GetAxis("Vertical"));
         }
@@ -37,10 +38,10 @@ public class PlayerMovement : MonoBehaviour
            mov = new Vector2(movimientoX, movimientoY);
         }
 
-        if ((Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0) && persoanjeActivo)
-        {
-            caminar.Play();
-        }
+        //if ((Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0) && persoanjeActivo)
+        //{
+          //  caminar.Play();
+        //}
         
     }
 
