@@ -11131,8 +11131,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 31.670197, y: -2.181}
-  m_SizeDelta: {x: -300.544, y: -4.6553}
+  m_AnchoredPosition: {x: 29.59, y: -3.01}
+  m_SizeDelta: {x: -304.7, y: 16.95}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &663313997
 MonoBehaviour:
@@ -11876,7 +11876,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -184.2, y: 125.5}
+  m_AnchoredPosition: {x: -184.19998, y: 125.5}
   m_SizeDelta: {x: -62.7108, y: 89.5232}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &734891842
@@ -21002,7 +21002,7 @@ MonoBehaviour:
   botonE: {fileID: 433252443}
   barra: {fileID: 163600940}
   LockPick:
-  - {fileID: 1465671468}
+  - {fileID: 633396473}
   - {fileID: 1465671468}
   - {fileID: 1629784294}
   - {fileID: 1691713286}
@@ -35970,10 +35970,10 @@ RectTransform:
   - {fileID: 663313996}
   m_Father: {fileID: 163600941}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.264}
+  m_AnchorMin: {x: 0, y: 0.24865144}
   m_AnchorMax: {x: 1, y: 0.651}
-  m_AnchoredPosition: {x: -13.284302, y: -0.38200378}
-  m_SizeDelta: {x: 86.1026, y: -16.892}
+  m_AnchoredPosition: {x: -13.279999, y: -0.7499924}
+  m_SizeDelta: {x: 86.1, y: -9.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1807701657
 MonoBehaviour:
