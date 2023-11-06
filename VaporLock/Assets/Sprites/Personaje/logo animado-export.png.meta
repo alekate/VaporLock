@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 52e6c14af63dc1e4ea462775c7a5af9b
+guid: a4c7aa157c9554b4eb95897e98b912ee
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 192
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -123,13 +123,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: VAPORLOCK animado (1140x104)_0
+      name: logo animado-export_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 190
-        height: 104
+        height: 94
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,20 +137,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3c4f59bee93b265478d4a5b4a6aa2ec9
-      internalID: 1993203536
+      spriteID: e9311fc4d3f32c9419a562a28cfc2d26
+      internalID: 1686361822
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: VAPORLOCK animado (1140x104)_1
+      name: logo animado-export_1
       rect:
         serializedVersion: 2
         x: 190
         y: 0
         width: 190
-        height: 104
+        height: 94
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -158,20 +158,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1373399d8c343674381247fda0d2c404
-      internalID: 1032028928
+      spriteID: dc13c16f99f366447884d3b074a42059
+      internalID: 753600780
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: VAPORLOCK animado (1140x104)_2
+      name: logo animado-export_2
       rect:
         serializedVersion: 2
         x: 380
         y: 0
         width: 190
-        height: 104
+        height: 94
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -179,20 +179,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a53523adde4e07148ad049d033f94fa3
-      internalID: 1271389996
+      spriteID: d7ce1556a55f3dd4caff3d6ee2d7ccc2
+      internalID: -468414815
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: VAPORLOCK animado (1140x104)_3
+      name: logo animado-export_3
       rect:
         serializedVersion: 2
         x: 570
         y: 0
         width: 190
-        height: 104
+        height: 94
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -200,20 +200,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 41ed32ee61a5299458ce41441a57c6ff
-      internalID: 1851200386
+      spriteID: 60c9b6179b0c6474aa2f7a0cce94955a
+      internalID: 181148225
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: VAPORLOCK animado (1140x104)_4
+      name: logo animado-export_4
       rect:
         serializedVersion: 2
         x: 760
         y: 0
         width: 190
-        height: 104
+        height: 94
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -221,20 +221,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 119ded29682d9a04c803246e1abfcf65
-      internalID: -1873624362
+      spriteID: 39686e92c411a9947a9abab2037f84b7
+      internalID: -1658935480
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: VAPORLOCK animado (1140x104)_5
+      name: logo animado-export_5
       rect:
         serializedVersion: 2
         x: 950
         y: 0
         width: 190
-        height: 104
+        height: 94
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -242,8 +242,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dedc3ee4a67082c4abe117b20eb055e7
-      internalID: 1165583865
+      spriteID: 7d1773ade99102b45aa244b2d201e55a
+      internalID: -1944655255
       vertices: []
       indices: 
       edges: []
@@ -259,12 +259,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      VAPORLOCK animado (1140x104)_0: 1993203536
-      VAPORLOCK animado (1140x104)_1: 1032028928
-      VAPORLOCK animado (1140x104)_2: 1271389996
-      VAPORLOCK animado (1140x104)_3: 1851200386
-      VAPORLOCK animado (1140x104)_4: -1873624362
-      VAPORLOCK animado (1140x104)_5: 1165583865
+      logo animado-export_0: 1686361822
+      logo animado-export_1: 753600780
+      logo animado-export_2: -468414815
+      logo animado-export_3: 181148225
+      logo animado-export_4: -1658935480
+      logo animado-export_5: -1944655255
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
