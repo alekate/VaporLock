@@ -14,7 +14,7 @@ private void Update()
 {
     if(Input.GetKeyDown(KeyCode.E) && activo)
     {
-       Instantiate(Victoria);
+      SceneManager.LoadScene("Cinematica Final");
     }
 }
     private void OnTriggerEnter2D(Collider2D collision)
